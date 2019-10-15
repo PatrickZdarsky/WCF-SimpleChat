@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace ChatLib
 {
-    class ChatMessage
+    public class ChatMessage
     {
         [DataMember]
-        public DateTime dateTime { get; set; }
+        public int ID { get; set; }
         [DataMember]
-        public string userName { get; set; }
+        public DateTime DateTime { get; set; }
         [DataMember]
-        public string message { get; set; }
+        public string UserName { get; set; }
+        [DataMember]
+        public string Message { get; set; }
     }
 }
