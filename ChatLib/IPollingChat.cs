@@ -11,7 +11,7 @@ namespace ChatLib
     /// Simple Chat using Polling
     /// </summary>
     [ServiceContract]
-    public interface ISimpleChat
+    public interface IPollingChat
     {
         [OperationContract]
         ChatMessage SendMessage(ChatMessage chatMessage);

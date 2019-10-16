@@ -46,7 +46,7 @@
     <Compile Include="ChatMessage.cs" />
     <Compile Include="IChatClient.cs" />
     <Compile Include="IChatService.cs" />
-    <Compile Include="ISimpleChat.cs" />
+    <Compile Include="IPollingChat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

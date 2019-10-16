@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using ChatService;
+using ChatLib;
 
-namespace ChatLib
+namespace ChatService
 {
-    class SimpleChat : ISimpleChat
+    class PollingChat : IPollingChat
     {
         public int GetLastMessageID()
         {

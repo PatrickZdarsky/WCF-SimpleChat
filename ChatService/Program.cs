@@ -15,7 +15,7 @@ namespace ChatService
             
             Console.WriteLine(" == Chat-Service by Patrick Zdarsky 2019 ==");
             Console.WriteLine("Starting Polling-Service...");
-            var pollingService = new ServiceHost(typeof(SimpleChat));
+            var pollingService = new ServiceHost(typeof(PollingChat));
             pollingService.Open();
             Console.WriteLine("Starting Two-Way ChatService...");
             var chatService = new ServiceHost(typeof(ChatService));
@@ -24,6 +24,8 @@ namespace ChatService
 
             Console.ReadLine();
 
+            pollingService.Close();
+            chatService.Close();
         }
     }
 }
