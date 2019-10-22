@@ -1,3 +1,4 @@
+using System;
 using System.ServiceModel;
 
 namespace ChatLib
@@ -18,5 +19,13 @@ namespace ChatLib
         /// <returns>The ID of the sent message</returns>
         [OperationContract]
         int SendMessage(ChatMessage chatMessage);
+
+        /// <summary>
+        /// Register a client on the server
+        /// </summary>
+        /// <param name="address">The address of the client TwoWay WCF Service Endpoint</param>
+        /// <param name="userName">The name of the user</param>
+        [OperationContract]
+        void Register(string address, string userName);
     }
 }
