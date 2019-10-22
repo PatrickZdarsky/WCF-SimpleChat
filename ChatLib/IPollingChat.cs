@@ -10,11 +10,14 @@ namespace ChatLib
     {
         /// <summary>
         /// Send a Message to the server, the returned message ist the same one but with an ID
+        ///
+        /// The first message that the client sends is also used to register the client.
+        /// A NULL message is typically sent as the first message in order to register the client
         /// </summary>
         /// <param name="chatMessage">The message to send</param>
-        /// <returns>The same ChatMessage but with an ID</returns>
+        /// <returns>The ID of the sent message</returns>
         [OperationContract]
-        ChatMessage SendMessage(ChatMessage chatMessage);
+        int SendMessage(ChatMessage chatMessage);
 
         /// <summary>
         /// Query the server for the last message id
