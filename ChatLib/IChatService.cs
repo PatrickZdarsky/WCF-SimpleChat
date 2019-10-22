@@ -15,8 +15,8 @@ namespace ChatLib
         /// A NULL message is typically sent as the first message in order to register the client
         /// </summary>
         /// <param name="chatMessage">The message to send</param>
-        /// <returns>The same ChatMessage but with an ID</returns>
+        /// <returns>The ID of the sent message</returns>
         [OperationContract]
-        ChatMessage SendMessage(ChatMessage chatMessage);
+        int SendMessage(ChatMessage chatMessage);
     }
 }

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace ChatLib
 {
     [DataContract]
+    [Serializable]
     public class ChatMessage
     {
         [DataMember]
