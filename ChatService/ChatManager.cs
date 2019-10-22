@@ -10,6 +10,12 @@ namespace ChatService
         
         public static List<ChatUser> ChatUsers { get; private set; }
 
+        public static void Init()
+        {
+            ChatMessages = new List<ChatMessage>();
+            ChatUsers = new List<ChatUser>();
+        }
+
         public static void SendMessage(ChatMessage chatMessage)
         {
             ChatMessages.Add(chatMessage);

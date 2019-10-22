@@ -12,6 +12,7 @@ namespace ChatService
     {
         static void Main(string[] args)
         {
+            ChatManager.Init();
             
             Console.WriteLine(" == Chat-Service by Patrick Zdarsky 2019 ==");
             Console.WriteLine("Starting Polling-Service...");

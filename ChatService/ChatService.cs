@@ -6,7 +6,7 @@ namespace ChatService
 {
     public class ChatService : IChatService
     {
-        public ChatMessage SendMessage(ChatMessage chatMessage)
+        public int SendMessage(ChatMessage chatMessage)
         {
             //Get Client IP-Address
             var context = OperationContext.Current;
@@ -18,7 +18,7 @@ namespace ChatService
             //Send message to all other clients and set message ID
             ChatManager.SendMessage(chatMessage);
             //Return chatMessage with proper ID
-            return chatMessage;
+            return chatMessage.ID;
         }
     }
 }
