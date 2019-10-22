@@ -15,11 +15,11 @@ namespace ChatService
             return ChatManager.ChatMessages.FindLast(message => message.ID == id);
         }
 
-        public ChatMessage SendMessage(ChatMessage chatMessage)
+        public int SendMessage(ChatMessage chatMessage)
         {
             ChatManager.ChatMessages.Add(chatMessage);
             chatMessage.ID = ChatManager.ChatMessages.IndexOf(chatMessage);
-            return chatMessage;
+            return chatMessage.ID;
         }
     }
 }
