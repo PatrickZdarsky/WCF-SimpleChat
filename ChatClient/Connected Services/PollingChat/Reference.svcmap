@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1a551491-e3f9-42b9-8413-6f9547c87683" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1230/PollingChat" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PollingChat.xsd" MetadataType="Schema" ID="413f3eb7-84fc-4fb2-bd78-b87a39ec1b06" SourceId="1" SourceUrl="http://localhost:1230/PollingChat?xsd=xsd0" />
+    <MetadataFile FileName="PollingChat.disco" MetadataType="Disco" ID="68eb1458-2bb9-4102-9d2a-a74a3b43ab00" SourceId="1" SourceUrl="http://localhost:1230/PollingChat?disco" />
+    <MetadataFile FileName="PollingChat.wsdl" MetadataType="Wsdl" ID="9ff82c36-2e87-4bc7-af92-c9d679a3615c" SourceId="1" SourceUrl="http://localhost:1230/PollingChat?wsdl" />
+    <MetadataFile FileName="PollingChat1.xsd" MetadataType="Schema" ID="f42834b8-c839-4326-a4c9-d3e7466eb5cf" SourceId="1" SourceUrl="http://localhost:1230/PollingChat?xsd=xsd2" />
+    <MetadataFile FileName="PollingChat2.xsd" MetadataType="Schema" ID="a4d1431b-8deb-4435-ae54-71512779faf1" SourceId="1" SourceUrl="http://localhost:1230/PollingChat?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

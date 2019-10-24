@@ -1,0 +1,17 @@
+﻿<Window x:Class="ChatClient.ChatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatClient"
+        mc:Ignorable="d"
+        Title="ChatWindow" Height="450" Width="315.877" Loaded="Window_Loaded">
+    <Grid>
+        <ScrollViewer Name="scrollViewer" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Width="280" HorizontalAlignment="Left" Margin="12,10,0,93">
+            <StackPanel Name="chatStackPanel" Width="260">
+
+            </StackPanel>
+        </ScrollViewer>
+        <TextBox x:Name="tbChatInput" HorizontalAlignment="Left" Height="78" Margin="12,332,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="280" KeyDown="TbChatInput_KeyDown"/>
+    </Grid>
+</Window>

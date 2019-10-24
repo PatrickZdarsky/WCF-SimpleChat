@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="264f6f0b-8fbe-41e6-b7d9-8639a15b497e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1230/Chat" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Chat.xsd" MetadataType="Schema" ID="a01eb551-a17e-4273-a2a2-1203792ea133" SourceId="1" SourceUrl="http://localhost:1230/Chat?xsd=xsd2" />
+    <MetadataFile FileName="Chat1.xsd" MetadataType="Schema" ID="a10e50e1-c262-4b3f-b970-ac61e3e40de3" SourceId="1" SourceUrl="http://localhost:1230/Chat?xsd=xsd1" />
+    <MetadataFile FileName="Chat2.xsd" MetadataType="Schema" ID="8cf1e2b3-7ee1-4bd7-a68e-d8c8d6fa5049" SourceId="1" SourceUrl="http://localhost:1230/Chat?xsd=xsd0" />
+    <MetadataFile FileName="ChatService.wsdl" MetadataType="Wsdl" ID="43aafaf3-ad0e-4b8a-b283-5ad355e7f170" SourceId="1" SourceUrl="http://localhost:1230/Chat?wsdl" />
+    <MetadataFile FileName="Chat.disco" MetadataType="Disco" ID="c2ef2cea-cef6-427f-b6c3-1ff9c697a0dc" SourceId="1" SourceUrl="http://localhost:1230/Chat?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
