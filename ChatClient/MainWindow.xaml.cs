@@ -36,6 +36,8 @@ namespace ChatClient
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             //Two-Way Button
+            btPolling.IsEnabled = false;
+            btTwoWay.IsEnabled = false;
             OpenChatWindow(new TwoWayChatHandler(tbAdress.Text + "/Chat", tbUsername.Text));
         }
 

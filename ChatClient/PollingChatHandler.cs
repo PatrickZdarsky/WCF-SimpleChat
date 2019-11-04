@@ -25,7 +25,6 @@ namespace ChatClient
             {
                 apiClient = new PollingChatClient(new BasicHttpBinding(),
                     new EndpointAddress(address));
-//                    apiClient = new PollingChatClient("BasicHttpBinding_IPollingChat");
             }catch(Exception e)
             {
                 Console.WriteLine(e);

@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.ServiceModel;
 using System.Threading;
 using ChatClient.Chat;
@@ -18,10 +19,18 @@ namespace ChatClient
             try
             {
                 var service = new ServiceHost(typeof(ChatClientImpl));
+                service.Opening += (sender, args) =>
+                {
+                    Console.WriteLine("Service Opening!");
+                };
+                service.Opened += (sender, args) =>
+                {
+                    Console.WriteLine("Service Opened!");
+                };
                 service.Open();
 
-                Thread.Sleep(6000000);
-                apiClient = new ChatServiceClient(new BasicHttpsBinding(), new EndpointAddress(address));
+               // Thread.Sleep(6000000);
+               // apiClient = new ChatServiceClient(new BasicHttpsBinding(), new EndpointAddress(address));
             }catch(Exception e)
             {
                 Console.WriteLine(e);
@@ -46,10 +55,11 @@ namespace ChatClient
 
         public void NewMessage(ChatMessage chatMessage)
         {
-            base.AddMessage(chatMessage);
+            AddMessage(chatMessage);
         }
     }
 
+    [ServiceBehavior(UseSynchronizationContext=false)]
     public class ChatClientImpl : IChatClient
     {
         public void NewMessage(ChatMessage chatMessage)

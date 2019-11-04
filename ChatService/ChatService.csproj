@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,12 +48,27 @@
     <Compile Include="ChatManager.cs" />
     <Compile Include="ChatService.cs" />
     <Compile Include="ChatUser.cs" />
+    <Compile Include="Connected Services\ChatClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="PollingChat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\ChatClient\ChatClient.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ChatClient\ChatClient1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ChatClient\ChatClient2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ChatClient\ChatClientImpl.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChatLib\ChatLib.csproj">
@@ -62,6 +78,24 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ChatClient\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ChatClient\ChatClient.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ChatClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ChatClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ChatClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
