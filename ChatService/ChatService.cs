@@ -12,13 +12,16 @@ namespace ChatService
             var context = OperationContext.Current;
             var messageProperties = context.IncomingMessageProperties;
             var messageProperty = (RemoteEndpointMessageProperty)messageProperties[RemoteEndpointMessageProperty.Name];
-
-            //Create ChatUser if the user is new
-            ChatManager.GetUserOrRegisterNew(messageProperty.Address);
+            
             //Send message to all other clients and set message ID
             ChatManager.SendMessage(chatMessage);
             //Return chatMessage with proper ID
             return chatMessage.ID;
+        }
+
+        public void Register(string address, string userName)
+        {
+            ChatManager.RegisterNew(address, userName);
         }
     }
 }

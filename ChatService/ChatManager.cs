@@ -28,17 +28,16 @@ namespace ChatService
             });
         }
 
-        public static ChatUser GetUserOrRegisterNew(string address)
+        public static ChatUser getUser(string userName)
         {
-            var chatUser = ChatUsers.Find(user => user.IpAddress == address);
-            if (chatUser == null)
-            {
-                chatUser = new ChatUser(address);
-                chatUser.Connect();
-                ChatUsers.Add(chatUser);
-            }
+            return ChatUsers.Find(user => user.UserName == userName);
+        }
 
-            return chatUser;
+        public static void RegisterNew(string address, string userName)
+        {
+            var chatUser = new ChatUser(address) {UserName = userName};
+            chatUser.Connect();
+            ChatUsers.Add(chatUser);
         }
     }
 }
