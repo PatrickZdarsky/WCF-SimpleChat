@@ -42,11 +42,9 @@ namespace ChatClient
 
         public abstract void SendMessage(ChatMessage chatMessage);
 
-        protected virtual void AddMessage(ChatMessage chatMessage)
+        protected void AddMessage(ChatMessage chatMessage)
         {
-           // chatMessage.UserName = userName;
-
-            Window.Dispatcher.Invoke(() =>
+            Window.Dispatcher?.Invoke(() =>
             {
                 var label = new Label();
                 if (chatMessage.Message != null)
