@@ -48,10 +48,11 @@ namespace ChatClient
 
             Window.Dispatcher.Invoke(() =>
             {
-                var label = new Label
-                {
-                    Content = chatMessage.DateTime + " " + chatMessage.UserName + " > " + chatMessage.Message
-                };
+                var label = new Label();
+                if (chatMessage.Message != null)
+                    label.Content = chatMessage.DateTime + " " + chatMessage.UserName + " > " + chatMessage.Message;
+                else
+                    label.Content = chatMessage.DateTime + " " + chatMessage.UserName + " ist dem Chat beigetreten!"; 
 
                 if (chatMessage.UserName == UserName)
                     label.Foreground = Brushes.Gray;

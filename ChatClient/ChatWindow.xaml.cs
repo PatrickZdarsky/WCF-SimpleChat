@@ -46,7 +46,7 @@ namespace ChatClient
                     UserName = ChatServiceHandler.UserName
                 };
                 ChatServiceHandler.SendMessage(chatMessage);
-                Debug.WriteLine("Message sent");
+                ((TextBox) sender).Text = "";
             }
         }
     }

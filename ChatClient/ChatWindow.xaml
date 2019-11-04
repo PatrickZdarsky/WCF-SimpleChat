@@ -12,6 +12,6 @@
 
             </StackPanel>
         </ScrollViewer>
-        <TextBox x:Name="tbChatInput" HorizontalAlignment="Left" Height="78" Margin="12,332,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="280" KeyDown="TbChatInput_KeyDown"/>
+        <TextBox x:Name="tbChatInput" HorizontalAlignment="Left" Height="78" Margin="12,332,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280" KeyDown="TbChatInput_KeyDown"/>
     </Grid>
 </Window>
