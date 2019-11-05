@@ -19,14 +19,6 @@ namespace ChatClient
             try
             {
                 var service = new ServiceHost(typeof(ChatClientImpl));
-                service.Opening += (sender, args) =>
-                {
-                    Console.WriteLine("Service Opening!");
-                };
-                service.Opened += (sender, args) =>
-                {
-                    Console.WriteLine("Service Opened!");
-                };
                 service.Open();
 
                // Thread.Sleep(6000000);
