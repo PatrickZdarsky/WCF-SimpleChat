@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChatService.ChatClient {
+namespace ChatService.ChatUserService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ChatClient.IChatClient")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ChatUserService.IChatClient")]
     public interface IChatClient {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IChatClient/NewMessage", ReplyAction="http://tempuri.org/IChatClient/NewMessageResponse")]
@@ -23,12 +23,12 @@ namespace ChatService.ChatClient {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IChatClientChannel : ChatService.ChatClient.IChatClient, System.ServiceModel.IClientChannel {
+    public interface IChatClientChannel : IChatClient, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ChatClientClient : System.ServiceModel.ClientBase<ChatService.ChatClient.IChatClient>, ChatService.ChatClient.IChatClient {
+    public partial class ChatClientClient : System.ServiceModel.ClientBase<IChatClient>, IChatClient {
         
         public ChatClientClient() {
         }

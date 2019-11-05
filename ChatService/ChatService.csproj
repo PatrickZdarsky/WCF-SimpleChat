@@ -48,7 +48,7 @@
     <Compile Include="ChatManager.cs" />
     <Compile Include="ChatService.cs" />
     <Compile Include="ChatUser.cs" />
-    <Compile Include="Connected Services\ChatClient\Reference.cs">
+    <Compile Include="Connected Services\ChatUserService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -59,16 +59,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\ChatClient\ChatClient.xsd">
+    <None Include="Connected Services\ChatUserService\ChatClient.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ChatClient\ChatClient1.xsd">
+    <None Include="Connected Services\ChatUserService\ChatClient1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ChatClient\ChatClient2.xsd">
+    <None Include="Connected Services\ChatUserService\ChatClient2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ChatClient\ChatClientImpl.wsdl" />
+    <None Include="Connected Services\ChatUserService\ChatClientImpl.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChatLib\ChatLib.csproj">
@@ -80,19 +80,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ChatClient\" />
+    <WCFMetadataStorage Include="Connected Services\ChatUserService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ChatClient\ChatClient.disco" />
+    <None Include="Connected Services\ChatUserService\ChatClient.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ChatClient\configuration91.svcinfo" />
+    <None Include="Connected Services\ChatUserService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ChatClient\configuration.svcinfo" />
+    <None Include="Connected Services\ChatUserService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ChatClient\Reference.svcmap">
+    <None Include="Connected Services\ChatUserService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -30,7 +30,7 @@ namespace ChatClient
                 service.Open();
 
                // Thread.Sleep(6000000);
-               // apiClient = new ChatServiceClient(new BasicHttpsBinding(), new EndpointAddress(address));
+                apiClient = new ChatServiceClient(new BasicHttpsBinding(), new EndpointAddress(address));
             }catch(Exception e)
             {
                 Console.WriteLine(e);
