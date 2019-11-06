@@ -10,6 +10,8 @@ namespace ChatService
         {
             try
             {
+                //If no message has been saved, return 0 as the last ID,
+                //otherwise return the ID of the latest Message
                 return ChatManager.ChatMessages.Count == 0 ? 0 : ChatManager.ChatMessages.Last().ID;
             }
             catch (Exception e)
@@ -23,6 +25,7 @@ namespace ChatService
         {
             try
             {
+                //Find the message with the given ID
                 return ChatManager.ChatMessages.FindLast(message => message.ID == id);
             }
             catch (Exception e)
@@ -37,8 +40,8 @@ namespace ChatService
         {
             try
             {
-                ChatManager.ChatMessages.Add(chatMessage);
-                chatMessage.ID = ChatManager.ChatMessages.IndexOf(chatMessage);
+                //Save Message and send the message to other connected clients
+                ChatManager.SendMessage(chatMessage);
                 return chatMessage.ID;
             }
             catch (Exception e)

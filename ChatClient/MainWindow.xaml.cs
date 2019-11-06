@@ -30,7 +30,7 @@ namespace ChatClient
         {
             //Polling Button
             OpenChatWindow(new PollingChatHandler(tbAdress.Text + "/PollingChat", tbUsername.Text, 
-                TimeSpan.FromMilliseconds(1000)));
+                TimeSpan.FromMilliseconds(200)));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

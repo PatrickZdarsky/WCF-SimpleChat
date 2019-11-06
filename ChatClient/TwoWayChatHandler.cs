@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Linq;
 using System.ServiceModel;
 using System.Threading;
 using ChatClient.Chat;
@@ -10,6 +11,8 @@ namespace ChatClient
     public class TwoWayChatHandler : ChatServiceHandler
     {
         public static TwoWayChatHandler ChatHandler;
+        private ServiceHost serviceHost;
+        private string localAdress;
 
         private ChatServiceClient apiClient;
 
@@ -18,11 +21,12 @@ namespace ChatClient
             ChatHandler = this;
             try
             {
-                var service = new ServiceHost(typeof(ChatClientImpl));
-                service.Open();
+                localAdress = "http://localhost:" + Utils.GetAvailablePort() + "/ChatClient";
+                serviceHost = new ServiceHost(typeof(ChatClientImpl), new Uri(localAdress));
+                serviceHost.Open();
 
-               // Thread.Sleep(6000000);
-                apiClient = new ChatServiceClient(new BasicHttpsBinding(), new EndpointAddress(address));
+               // Thread.Sleep(6000000)
+               apiClient = new ChatServiceClient(new BasicHttpBinding(), new EndpointAddress(address));
             }catch(Exception e)
             {
                 Console.WriteLine(e);
@@ -31,6 +35,7 @@ namespace ChatClient
 
         protected override void Open()
         {
+            apiClient.Register(localAdress, UserName);
             //Register user
             SendMessage(new ChatMessage
             {

@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatManager.cs" />
-    <Compile Include="ChatService.cs" />
+    <Compile Include="ChatServiceImpl.cs" />
     <Compile Include="ChatUser.cs" />
     <Compile Include="Connected Services\ChatUserService\Reference.cs">
       <AutoGen>True</AutoGen>

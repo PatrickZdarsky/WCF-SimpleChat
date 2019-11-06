@@ -20,17 +20,25 @@ namespace ChatService
         {
             ChatMessages.Add(chatMessage);
             chatMessage.ID = ChatMessages.IndexOf(chatMessage);
-            
+
             ChatUsers.ForEach(user =>
             {
                 if (user.UserName != chatMessage.UserName)
-                    user.SendMessage(chatMessage);
+                    try
+                    {
+                        user.SendMessage(chatMessage);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
             });
+            Console.WriteLine(chatMessage.DateTime + " | "+chatMessage.UserName + " > " + chatMessage.Message);
         }
 
-        public static ChatUser getUser(string userName)
+        public static void RemoveUser(ChatUser chatUser)
         {
-            return ChatUsers.Find(user => user.UserName == userName);
+            ChatUsers.Remove(chatUser);
         }
 
         public static void RegisterNew(string address, string userName)
@@ -38,6 +46,7 @@ namespace ChatService
             var chatUser = new ChatUser(address) {UserName = userName};
             chatUser.Connect();
             ChatUsers.Add(chatUser);
+            Console.WriteLine(userName + " with service at" + address +" connected as TwoWay!");
         }
     }
 }

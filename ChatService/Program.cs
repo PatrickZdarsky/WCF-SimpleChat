@@ -15,14 +15,17 @@ namespace ChatService
             ChatManager.Init();
             
             Console.WriteLine(" == Chat-Service by Patrick Zdarsky 2019 ==");
+            
+            
             Console.WriteLine("Starting Polling-Service...");
             var pollingService = new ServiceHost(typeof(PollingChat));
             pollingService.Open();
             Console.WriteLine("Starting Two-Way ChatService...");
-            var chatService = new ServiceHost(typeof(ChatService));
+            var chatService = new ServiceHost(typeof(ChatServiceImpl));
             chatService.Open();
+            
+            
             Console.WriteLine("Chat Service started! Press any key to stop service...");
-
             Console.ReadLine();
 
             pollingService.Close();
