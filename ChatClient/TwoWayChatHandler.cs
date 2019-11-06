@@ -48,6 +48,7 @@ namespace ChatClient
         public override void SendMessage(ChatMessage chatMessage)
         {
             apiClient.SendMessage(chatMessage);
+            AddMessage(chatMessage);
         }
 
         public void NewMessage(ChatMessage chatMessage)
